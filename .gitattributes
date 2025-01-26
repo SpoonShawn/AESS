@@ -1,1 +1,0 @@
-mysite/grader/deep_learning_files/*.ckpt filter=lfs diff=lfs merge=lfs -text
