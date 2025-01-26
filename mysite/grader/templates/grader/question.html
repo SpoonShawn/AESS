@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% load static %}
+
+{% block title %}
+ 英文作文评分
+{% endblock %}
+
+{% block main_block %}
+    <div class="container">
+      <ol class="breadcrumb my-4">
+          <li class="breadcrumb-item active"><a href="{% url 'grader:index' %}">主页</a></li>
+          <li class="breadcrumb-item active">题目 {{ question.set }}</li>
+      </ol>
+    </div>
+{% if question %}
+    <h1>作文题目 {{ question.set }}</h1>
+    <p class="text-justify">{{ question.question_title }}</p>
+    <div>
+        <a href={% url 'grader:file2txt' %}>
+            上传本地作文
+        </a>
+    </div>
+    <form method="post" novalidate>
+        {% csrf_token %}
+        {% include 'includes/form.html' %}
+        <button type="submit" class="btn btn-success">提交</button>
+    </form>
+{% else %}
+    <h1>发生错误！</h1>
+{% endif %}
+{% endblock %}
+

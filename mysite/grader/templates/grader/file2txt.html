@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% load static %}
+
+{% block title %}
+ 英文作文评分
+{% endblock %}
+
+{% block main_block %}
+    <div class="container">
+      <ol class="breadcrumb my-4">
+          <li class="breadcrumb-item active"><a href="{% url 'grader:index' %}">主页</a></li>
+          <li class="breadcrumb-item active"><a href="#" onclick="javascript :history.go(-1);">返回作文提交页</a></li>
+      </ol>
+    </div>
+    <form action="" method="post" enctype="multipart/form-data" >
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-info form-control " type="submit" value="submit">上传</button>
+    </form>
+    <div><br>作文内容识别结果：</div>
+    <textarea id="result" cols="145">{{ result }}</textarea>
+{% endblock %}

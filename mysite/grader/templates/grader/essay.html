@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block main_block %}
+    <div class="container">
+        <ol class="breadcrumb my-4">
+            <li class="breadcrumb-item active"><a href="{% url 'grader:index' %}">主页</a></li>
+            <li class="breadcrumb-item active"><a href="{% url 'grader:question' essay.question.set %}">作文题目 {{ essay.question.set }}</a></li>
+            <li class="breadcrumb-item active">文章</li>
+        </ol>
+    <div class="jumbotron">
+        <h1 class="display-4">分数： {{ essay.score }}/{{essay.question.max_score}}</h1>
+        <p class="lead">恭喜！本作文题目的满分是： {{ essay.question.max_score }}</p>
+        <hr class="my-4">
+        <p>你的作文分数由AES作文评分系统给出，仅供参考！</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'grader:question' essay.question.set %}" role="button">重新提交作文</a>
+    </div>
+
+    <div class="container">
+            <h2 class="display-4">你的作文内容：</h2>
+            <p class="text-justify">{{ essay.content }}</p>
+    </div>
+    </div>
+    <canvas id="myChart" width="400" height="400"></canvas>
+    <script src="https://cdn.staticfile.net/Chart.js/3.9.1/chart.js"></script>
+    <script>
+    const ctx = document.getElementById('myChart');
+    const data = {
+    labels: [
+        '词汇丰富度',
+        '段落数',
+        '分数',
+        '字数'
+    ],
+    datasets: [{
+        label: '英文作文分析评价',
+        data: [{{ wcount }}, {{ pcount }}, {{essay.score}}, {{ words }}],
+        fill: true,
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgb(255, 99, 132)',
+        pointBackgroundColor: 'rgb(255, 99, 132)',
+        pointBorderColor: '#fff',
+        pointHoverBackgroundColor: '#fff',
+        pointHoverBorderColor: 'rgb(255, 99, 132)'
+    }, {
+    label: '最高分',
+    data: [100, 100, {{essay.question.max_score}}, 100],
+    fill: true,
+    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+    borderColor: 'rgb(54, 162, 235)',
+    pointBackgroundColor: 'rgb(54, 162, 235)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgb(54, 162, 235)'
+    }]
+    };
+    const config = {
+    type: 'radar',
+    data: data,
+    options: {
+        responsive: false, // 设置图表为响应式，根据屏幕窗口变化而变化
+        maintainAspectRatio: false,// 保持图表原有比例
+        elements: {
+        line: {
+            borderWidth: 3 // 设置线条宽度
+        }
+        },
+        scales:{
+            r:{
+                suggestedMin:30,
+                suggestedMax:50
+            }
+        }
+    }
+    };
+    const myChart = new Chart(ctx, config);
+    </script>
+{% endblock %}

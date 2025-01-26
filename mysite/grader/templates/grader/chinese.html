@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% load static %}
+
+{% block title %}
+ 中文作文评分
+{% endblock %}
+
+{% block main_block %}
+    <div class="container">
+      <ol class="breadcrumb my-4">
+          <li class="breadcrumb-item active"><a href="{% url 'grader:index' %}">切换英文作文评分</a></li>
+      </ol>
+    </div>
+    <h1>中文作文上传</h1>
+    <div>
+        <a href={% url 'grader:file2txt' %}>
+            上传本地作文
+        </a>
+    </div>
+    <form method="post" novalidate>
+        {% csrf_token %}
+        {% include 'includes/form.html' %}
+        <button type="submit" class="btn btn-success">提交</button>
+    </form>
+{% endblock %}
