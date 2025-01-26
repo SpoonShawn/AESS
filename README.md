@@ -5,14 +5,14 @@
 
 中文数据集参考了[cubenlp/CEDCC_corpus](https://github.com/cubenlp/CEDCC_corpus)以及[cnunlp/Chinese-Essay-Dataset-For-Organization-Evaluation: A Chinese argumentative student essay dataset for Organization Evaluation and Discourse Element Identification](https://github.com/cnunlp/Chinese-Essay-Dataset-For-Organization-Evaluation)
 
-**mysite** 文件夹包含了基于Django的Web应用，运行manage.py并使用**venu**文件夹中的解释器即可在本地进行测试。
+**mysite** 文件夹包含了基于Django的Web应用，运行manage.py并使用**venv**文件夹中的解释器即可在本地进行测试。
 
 
 
 
 
 ## 环境配置
-- 环境配置已在**venu**文件夹中配置好，本地运行时选择**venu**中的解释器即可运行。
+- 环境配置已在**mysite/venv**文件夹中配置好，本地运行时选择**venv**中的解释器即可运行。
 
 
 
