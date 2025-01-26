@@ -19,13 +19,13 @@
 ## 主要内容
 - 系统登录界面
 
-![image-20250125213929997](C:\Users\SpoonShawn\AppData\Roaming\Typora\typora-user-images\image-20250125213929997.png)
+![image-20250125213929997](https://github.com/SpoonShawn/AESS/blob/master/img/image-20250125213929997.png)
 
 `Web应用入口。`
 
 * 用户登录界面
 
-![image-20250125214117872](C:\Users\SpoonShawn\AppData\Roaming\Typora\typora-user-images\image-20250125214117872.png)
+![image-20250125214117872](https://github.com/SpoonShawn/AESS/blob/master/img/image-20250125214117872.png)
 
 `已注册用户账号：20201108	密码：szx12345`
 
@@ -33,26 +33,26 @@
 
 * 作文评分页面
 
-![image-20250125214354131](C:\Users\SpoonShawn\AppData\Roaming\Typora\typora-user-images\image-20250125214354131.png)
+![image-20250125214354131](https://github.com/SpoonShawn/AESS/blob/master/img/image-20250125214354131.png)
 
-![image-20250125214714345](C:\Users\SpoonShawn\AppData\Roaming\Typora\typora-user-images\image-20250125214714345.png)
+![image-20250125214714345](https://github.com/SpoonShawn/AESS/blob/master/img/image-20250125214714345.png)
 
 * 支持文件上传及OCR
 
-![image-20250125214839893](C:\Users\SpoonShawn\AppData\Roaming\Typora\typora-user-images\image-20250125214839893.png)
+![image-20250125214839893](https://github.com/SpoonShawn/AESS/blob/master/img/image-20250125214839893.png)
 
 `OCR实例测试`
 
 * 评分可视化呈现
 
-![image-20250125215025983](C:\Users\SpoonShawn\AppData\Roaming\Typora\typora-user-images\image-20250125215025983.png)
+![image-20250125215025983](https://github.com/SpoonShawn/AESS/blob/master/img/image-20250125215025983.png)
 
 * 后端管理系统
 
-![image-20250125215117929](C:\Users\SpoonShawn\AppData\Roaming\Typora\typora-user-images\image-20250125215117929.png)
+![image-20250125215117929](https://github.com/SpoonShawn/AESS/blob/master/img/image-20250125215117929.png)
 
 `默认用户：admin 密码：123456`
 
-![image-20250125215211350](C:\Users\SpoonShawn\AppData\Roaming\Typora\typora-user-images\image-20250125215211350.png)
+![image-20250125215211350](https://github.com/SpoonShawn/AESS/blob/master/img/image-20250125215211350.png)
 
 `登录后可实现后端管理`
